@@ -1,11 +1,15 @@
 import { FormEvent, useState } from 'react'
+import { useAuth } from 'hooks/useAuth'
+
 import * as S from './styles'
 
 export default function Home() {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
 
-  function hanldeSubmit(event: FormEvent) {
+  const { signIn } = useAuth()
+
+  async function hanldeSubmit(event: FormEvent) {
     event.preventDefault()
 
     const data = {
@@ -13,7 +17,7 @@ export default function Home() {
       password,
     }
 
-    console.log(data, 'data')
+    await signIn(data)
   }
 
   return (
