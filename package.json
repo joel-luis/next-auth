@@ -12,6 +12,7 @@
     "@stitches/react": "^1.2.8",
     "axios": "^1.1.3",
     "next": "12.2.5",
+    "nookies": "^2.5.2",
     "react": "18.2.0",
     "react-dom": "18.2.0"
   },
